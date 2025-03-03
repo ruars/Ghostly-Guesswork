@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghostly Guesswork</title>
+    <meta name="description" content="A fun ghost identification game. Test your knowledge of ghostly evidence.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+</head>
+<body>
+    <header>
+        <h1>Ghostly Guesswork</h1>
+    </header>
+    <div id="game">
+        <div id="question-container">  
+            <p id="question" class="question"></p>
+            <img id="question-image" src="" alt="Question Image"> 
+        </div>
+        <div class="buttons">
+            <label>
+                <input type="radio" name="answer" id="yes" onclick="answer(true)">
+                <span>Yes</span>
+            </label>
+            <label>
+                <input type="radio" name="answer" id="no" onclick="answer(false)">
+                <span>No</span>
+            </label>
+        </div>
+        <div class="buttons">
+            <button onclick="startAgain()">Start Again</button>
+        </div>
+        <p id="result" class="result"></p>
+        <div id="answer-tracker">
+            <h3>Your Selections:</h3>
+            <ul id="answer-list"></ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Ghostly Guesswork | All rights reserved Ruars INC</p>
+        <p class="disclaimer">Disclaimer: This is a fan-made project and is not affiliated with or endorsed by Kinetic Games or Phasmophobia. All images and names related to Phasmophobia are the property of their respective owners.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

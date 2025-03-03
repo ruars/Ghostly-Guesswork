@@ -1,0 +1,227 @@
+/* Global Styling */
+body { 
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    padding: 20px; 
+    background-color: #222;
+    color: white;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
+    margin-top: auto; /* Ensures the footer stays at the bottom */
+}
+
+/* Game Section */
+#game {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.question {
+    font-size: 20px; 
+    margin-bottom: 20px;
+}
+
+.buttons label {
+    margin: 10px;
+    font-size: 16px;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.buttons button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #666;
+}
+
+/* Result Styling */
+.result {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-top: 20px;
+}
+
+/* Answer Tracker Styling */
+#answer-tracker {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#answer-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#answer-list li {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#answer-list li span {
+    margin-left: 10px;
+}
+
+#answer-list li img {
+    max-width: 40px; /* Ensure images don't get too large */
+    max-height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    object-fit: contain; /* Add this line */
+}
+
+/* Footer Styling */
+footer p {
+    margin: 0;
+}
+
+/* Hide the default checkbox */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Style the custom checkbox */
+.buttons label input[type="radio"] + span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin-right: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Style the checked state */
+.buttons label input[type="radio"]:checked + span {
+    border-color: #00bfff; /* Example accent color */
+}
+
+/* Add a checkmark icon */
+.buttons label input[type="radio"]:checked + span::before {
+    content: '\2713';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #00bfff;
+}
+/* Responsive adjustments for screens smaller than 600px */
+@media (max-width: 600px) {
+    #game {
+        max-width: 90%; /* Adjust as needed */
+    }
+
+    .buttons button {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    #answer-list li {
+        font-size: 16px; /* Adjust as needed */
+    }
+}
+
+
+.question {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold; /* Make the question bolder */
+}
+
+.result {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #00bfff; /* Add an accent color to the result */
+}
+
+#answer-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #333; /* Add a border */
+    padding: 10px; /* Add padding */
+    border-radius: 5px;
+}
+
+#answer-list li {
+    font-size: 18px;
+    margin-bottom: 5px;
+    padding: 5px; /* Add padding to list items */
+}
+
+/* Default styles for larger screens */
+#game {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.buttons button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+    #game {
+        max-width: 90%; /* Use a percentage to fill the screen */
+    }
+
+    .buttons button {
+        display: block; /* Stack buttons vertically */
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    #answer-list li {
+        font-size: 14px; /* Reduce font size */
+    }
+}
+
+/* Styles for even smaller screens (e.g., 400px) */
+@media (max-width: 400px) {
+    #answer-list li {
+        font-size: 12px; /* Further reduce font size */
+    }
+}
